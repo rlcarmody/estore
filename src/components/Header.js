@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from './assets/logo.svg';
+import logo from '../assets/logo.svg';
 import Logo from './Logo';
 import Row from './Row';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
-export const StyledHeader = styled.header`
+ const StyledHeader = styled.header`
   background-color: #296800;
   width: 100vw;
   height: 3rem;
@@ -21,10 +20,8 @@ const Title = styled.h1`
   color: #FFFFFF;
   margin: 0;
   display: inline;
-  font-family: 'Martel Sans', sans-serif;
   padding: .5rem;
 `
-
 
 export const Header = () => {
   return (
