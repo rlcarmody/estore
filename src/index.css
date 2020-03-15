@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Martel+Sans:300&display=swap');
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: 'Martel Sans', sans-serif;
 }
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Martel Sans', sans-serif;
 }
