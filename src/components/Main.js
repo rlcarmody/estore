@@ -1,7 +1,15 @@
 import React from 'react';
-import { ProductListItem } from '../components';
+import styled from 'styled-components';
+import ProductListItem from './ProductListItem';
 
-export default { title: 'Product Card', component: ProductListItem }
+const MainContainer = styled.main`
+  width: 100%;
+  height: 100%;
+  background-color: #EFEFEF;
+  grid-area: main;
+  max-height: calc(100vh - 3rem);
+  overflow-y: scroll;
+`
 
 const productDetails = {
   image: 'https://picsum.photos/id/119/200/150',
@@ -10,7 +18,13 @@ const productDetails = {
   price: '29.99'
 }
 
-export const ProductListCard = () => {
+export const Main = () => {
 
-  return <ProductListItem productDetails={productDetails} />
+  return (
+    <MainContainer>
+      {Array(20).fill(productDetails).map(product => <ProductListItem productDetails={product} />)}
+    </MainContainer>
+  )
 }
+
+export default Main;

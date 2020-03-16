@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
  const StyledHeader = styled.header`
   background-color: #296800;
+  grid-area: header;
   width: 100vw;
   height: 3rem;
   display: flex;

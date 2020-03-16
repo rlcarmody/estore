@@ -3,10 +3,13 @@ import { List, ListItem } from './List';
 import styled from 'styled-components';
 
 
-const SidebarSytle = styled.div`
+const SidebarStyle = styled.div`
   box-shadow: 3px 0 5px -2px rgba(0,0,0,.5);
   height: 100%;
   box-sizing: border-box;
+  z-index: 1;
+  grid-area: sidebar;
+  background-color: #FFF;
 `
 
 const CategoryHeader = styled.h2`
@@ -27,14 +30,14 @@ export const SideBar = (props) => {
   }, [])
 
   return (
-    <SidebarSytle>
+    <SidebarStyle>
       <CategoryHeader>
         Filter by Category
       </CategoryHeader>
       <List>
         {categories.map(item => <ListItem active={item.active} onClick={() => setActive(item.categoryName)}>{item.categoryName}</ListItem>)}
       </List>
-      </SidebarSytle>
+    </SidebarStyle>
   )
 }
 
